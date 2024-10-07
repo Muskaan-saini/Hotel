@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(176, 195, 195);
+        }
+        form{
+            height:300px;
+            width:300px;
+            background-color: rgb(162, 216, 218);
+            padding-top:50px;
+            box-shadow: 2px 2px 10px white;
+            color:rgb(73, 92, 93);
+            margin-top: 160px;
+            margin-left: 450px;
+            border-radius: 8px;
+        }
+        input{
+            margin-top: 15px;
+            font-size: 16px;
+            border:none;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: 10px;
+            background: transparent;
+            border-bottom: 2px solid black;
+            
+        }
+        button{
+            margin-top: 30px;
+            height: 30px;
+            width:80px;
+            margin-left:100px ;
+        }
+        label{
+            margin-left: 5px;
+        }
+    </style>
+    
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Late
+st compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="{% static 'css\style-index.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<!--navbar-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container-fluid">
+    <div class="navbar-header">
+<a class="col-lg-3 col-xs-12 navbar-brand" href="#"><img src="{% static 'images\sky-logo-header.png' %}"></a>
+</a>
+    </div>
+    <ul class="nav navbar-nav">
+		<li><a href="index">Home</a></li>
+		<li><a href="about">About</a></li>
+		<li><a href="room">Rooms</a></li>
+		<li><a href="gallery">Gallery</a></li>
+		<li><a href="reservation">Reservation</a></li>
+		<li><a href="contact">Contact</a></li>
+		<li><a href="login">Login</a></li>
+		<li><a href="signup">Sign-up</a></li>
+
+    </ul>
+</div>
+</nav>
+
+    <form action="signupData" method="post">{% csrf_token %}
+        <label >First Name:</label>
+        <input type="text" name="first"><br>
+        <label>Last Name:</label>
+        <input type="text" name="last"><br>
+        <label>E-mail:</label>
+        <input type="email" name="email"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br><br>
+        <button>Submit</button>
+    </form>
+    <div class="col-lg-12 footer">
+        <div class="container">
+        
+    <!--part 1 logo-->
+            <div class="col-lg-3 col-xs-12 part1">
+                <center>
+                    <img src="{% static 'images\sky-logo-footer.png' %}">
+                </center>
+            </div>
+    
+    <!--part-2 -->
+            <div class="col-lg-3 col-xs-12 part2">
+                <ul>
+                <h4>
+                    <li><a href="#site map">Site Map</a></li>
+                    <li><a href="#site map">Terms and conditions</a></li>
+                    <li><a href="#site map">Privacy Policy </a></li>
+                    <li><a href="#site map">Help</a></li>
+                    <li><a href="#site map">Affiliate</a></li>
+                </h4>
+                </ul>
+            </div>
+    
+    <!--part-3-->
+            <div class="col-lg-3 col-xs-12 part3">
+                <ul>
+                <h4>
+                    <li><a href="#site map">Our Location</a></li>
+                    <li><a href="#site map">Career</a></li>
+                    <li><a href="#site map">About Us </a></li>
+                    <li><a href="#site map">Contact Us</a></li>
+                </h4>
+                </ul>
+            </div>
+    
+    
+    <!--part-4-->
+            <div class="col-lg-3 col-xs-12 part4">
+                <ul>
+                <h4>
+                    <li><a href="#site map">FAQs</a></li>
+                    <li><a href="#site map">News</a></li>
+                    <li><a href="#site map">Photo and Vedio </a></li>
+                    <li><a href="#site map">Restaurant</a></li>
+                    <li><a href="#site map">Gift Card</a></li>
+                    
+                </h4>
+                </ul>
+            </div>
+    
+    
+        </div>
+    </div>
+    
+</body>
+</html>
